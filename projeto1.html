@@ -2,13 +2,47 @@
 <html lang ="pt-br">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewpower" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">        <title>Document</title>
     </head>
     <body>
         <script>
-            // aqui vai o codigo
-            
+    //1 criando as variaveis.
+    let name = "Isabella";
+    let total = 0;
+    let idade = 15;
+    let habilitado = true;
+
+    //2 verificando idade e somando pontos
+    if (idade >= 30) {
+        total = total + 5; // ou total +=5;
+
+    }
+    else if (idade >= 20) {
+        total = total + 10; // ou total +=10;
+
+    }   
+    else if (idade <= 18 ) {
+        total = total + 0; //ou total +=0;
+
+    } 
+    //3 se tiver habilitado ganha mais 10
+    if (habilitado ===true) {
+        total = total + 10;
+    
+    }
+    //4 Mostrando o resultado
+    console.log("Nome: " + name);
+    console.log("Idade: " + idade);
+
+    if (total >= 15) {
+        console.log(name + " Esta habilitado(a) para o serviço");
+
+    } else {
+        console.log(name + " Não está habilitado(a) para o serviço");
+
+    }
+    //Extra: Nistrar o total de pontos
+    console.log("Total de Pontos obtidos: "+ total);
         </script>
 
     </body>
