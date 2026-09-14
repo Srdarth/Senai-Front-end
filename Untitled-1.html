@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Idade</title>
+</head>
+<body>
+
+<script>
+    // 1. Criando as variáveis (o professor já te deu essas)
+    let nome = 'Isabella';
+    let total = 0;
+    let idade = 18;
+    let habilitado = false;
+
+    // 2. Verificando a idade e somando os pontos
+    if (idade > 30) {
+        total = total + 5;   // ou total += 5;
+    } 
+    else if (idade > 20) {
+        total = total + 10;  // ou total += 10;
+    } 
+    else if (idade < 18) {
+        total = total + 0;   // ou total += 0;
+    }
+
+    // 3. Se estiver habilitado, ganha mais 10 pontos
+    if (habilitado === true) {
+        total = total + 10;  // ou total += 10;
+    }
+
+    // 4. Mostrando o resultado no Console
+    if (total >= 15) {
+        console.log("O candidato:", nome, "está habilitado para o serviço");
+    } else {
+        console.log("O candidato:", nome, "não está habilitado para o serviço");
+    }
+
+    // Extra: mostrar quantos pontos ficou
+    console.log("Total de pontos:", total);
+</script>
+
+</body>
+</html>

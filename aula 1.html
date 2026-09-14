@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificação de Candidato</title>
+</head>
+<body>
+    <script>
+        let nome = "Alefe";
+        let total = 0;
+        let idade = 20;
+        let habilitado = true;
+
+        // Verifica a idade
+        if (idade > 30) {
+            total += 5;
+        } else if (idade > 20) {
+            total += 10;
+        } else if (idade < 18) {
+            total += 0;
+        }
+        // Observação: se a idade for exatamente 18, 19 ou 20, não soma nada pela idade (fica 0)
+
+        // Se estiver habilitado, ganha +10
+        if (habilitado === true) {
+            total += 10;
+        }
+
+        // Saída
+        if (total >= 15) {
+            console.log("O candidato:", nome, "está habilitado para o serviço");
+        } else {
+            console.log("O candidato:", nome, "não está qualificado para o serviço");
+        }
+
+        console.log("Total de pontos =", total);
+    </script>
+</body>
+</html>
