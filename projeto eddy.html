@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Edson Souza Leite — operação, dados, automação e criação digital. Rio de Janeiro. Vá Além do Óbvio.">
+  <meta property="og:title" content="Edson Souza Leite">
+  <meta property="og:description" content="Do atendimento e da venda pro código, pro inventário e pra imagem.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@eddysleite">
+  <title>Edson Souza Leite · Vá Além do Óbvio</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#08090d;--surf:#10121a;--t:#f2f3f5;--m:#a0a5b3;--line:#2a2e3a;--p:#8f7cff;--c:#4ecdc4}
+    html{scroll-behavior:smooth}
+    body{font-family:system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--t);line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(92%,1000px);margin:0 auto}
+    .top{position:sticky;top:0;z-index:40;background:rgba(8,9,13,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+    .top-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:14px}
+    .mark{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#8f7cff,#4ecdc4);display:grid;place-items:center;color:#0b0b12;font-weight:900}
+    .logo small{display:block;font-weight:400;color:var(--m);font-size:10px;letter-spacing:1.2px;text-transform:uppercase}
+    .nav{display:flex;flex-wrap:wrap;gap:4px}
+    .nav a{font-size:12px;padding:6px 10px;border-radius:999px;color:var(--m)}
+    .nav a:hover{color:var(--t);border:1px solid var(--line)}
+    header{padding:64px 0 56px;border-bottom:1px solid var(--line)}
+    .eyebrow{color:var(--c);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+    h1{font-size:clamp(36px,6vw,56px);line-height:1;margin-bottom:8px}
+    h1 span{color:var(--p)}
+    .slogan{display:inline-block;margin:8px 0 16px;padding:4px 12px;border:1px solid rgba(143,124,255,.4);border-radius:999px;color:var(--p);font-size:12px;letter-spacing:1px}
+    .one{font-size:clamp(16px,2.2vw,20px);color:#c5c9d4;margin-bottom:22px;max-width:640px}
+    .dual{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:420px;margin-bottom:12px}
+    .face{background:var(--surf);border:1px solid var(--line);border-radius:16px;overflow:hidden;text-align:center}
+    .face.sys{border-color:rgba(143,124,255,.45);box-shadow:0 0 22px rgba(143,124,255,.12)}
+    .face img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#151824}
+    .face figcaption{padding:10px 8px 12px;font-size:12px}
+    .face strong{display:block;color:var(--t);font-size:13px}
+    .face span{color:var(--m)}
+    .pillars{font-size:11px;color:var(--m);letter-spacing:1.4px;text-transform:uppercase;margin-bottom:18px}
+    .lead{color:var(--m);max-width:680px;margin-bottom:24px;font-size:15px}
+    .btns{display:flex;flex-wrap:wrap;gap:10px}
+    .btn{display:inline-block;padding:11px 18px;border:1px solid var(--line);border-radius:999px;background:var(--surf);font-size:14px}
+    .btn:hover{border-color:var(--p);transform:translateY(-1px)}
+    .btn-p{background:var(--p);border-color:var(--p);color:#0b0b12;font-weight:700}
+    section{padding:64px 0;border-bottom:1px solid var(--line)}
+    .lab{color:var(--p);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+    .h2{font-size:clamp(24px,3.5vw,34px);margin-bottom:20px}
+    .txt{max-width:820px}
+    .txt p{color:var(--m);margin-bottom:12px;font-size:15px}
+    .hi{color:var(--t);font-weight:600}
+    .boxes{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .box{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:20px}
+    .box h3{font-size:16px;margin-bottom:8px}
+    .box h3 em{font-style:normal;color:var(--p)}
+    .box p,.box li{color:var(--m);font-size:14px}
+    .box ul{margin-top:8px;padding-left:18px}
+    .box li{margin-bottom:4px}
+    .jobs{display:grid;gap:12px}
+    .job{border-left:3px solid var(--p);background:var(--surf);padding:16px 18px;border-radius:0 12px 12px 0}
+    .job h3{font-size:15px;margin-bottom:2px}
+    .job .co{color:var(--c);font-size:13px;margin-bottom:6px}
+    .job p{color:var(--m);font-size:13px}
+    .g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .card{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:16px}
+    .card h3{font-size:15px;margin-bottom:6px}
+    .card p{color:var(--m);font-size:13px}
+    .note{margin-top:6px;font-size:12px;color:var(--p)}
+    .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+    .chip{font-size:11px;padding:4px 9px;border:1px solid #383844;border-radius:20px;color:#c8c8d0}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surf);font-size:13px;color:#cdd1da}
+    .proj{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .pr{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:16px}
+    .pr:hover{border-color:var(--p)}
+    .pr h3{font-size:15px;margin-bottom:6px}
+    .pr p{color:var(--m);font-size:13px;margin-bottom:8px}
+    .st{font-size:12px;color:var(--c)}
+    .st:hover{text-decoration:underline}
+    .hub{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .hub a{display:block;padding:14px 16px;background:var(--surf);border:1px solid var(--line);border-radius:12px}
+    .hub a:hover{border-color:var(--p)}
+    .hub strong{display:block;font-size:14px;margin-bottom:2px}
+    .hub span{font-size:12px;color:var(--m)}
+    .proc{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+    .pi{text-align:center;padding:14px 6px;border:1px solid var(--line);background:var(--surf);border-radius:12px}
+    .pi strong{display:block;margin-bottom:4px;font-size:13px}
+    .pi span{color:var(--m);font-size:11px}
+    .contact{text-align:center;max-width:560px;margin:0 auto}
+    .contact p{color:var(--m);margin-bottom:18px}
+    footer{padding:36px 0;text-align:center;color:#6b7080;font-size:13px}
+    footer .s{color:var(--p);margin-top:6px;letter-spacing:1px;font-size:11px;text-transform:uppercase}
+    @media(max-width:800px){
+      .boxes,.g2,.proj,.hub{grid-template-columns:1fr}
+      .proc{grid-template-columns:1fr 1fr}
+      .nav{display:none}
+    }
+    @media(max-width:480px){.proc{grid-template-columns:1fr}.dual{max-width:100%}}
+  </style>
+</head>
+<body>
+<nav class="top"><div class="wrap top-in">
+  <a class="logo" href="#topo"><span class="mark">E</span><span>Edson Souza Leite<small>Vá Além do Óbvio</small></span></a>
+  <div class="nav">
+    <a href="#essencia">Essência</a>
+    <a href="#experiencia">Trajetória</a>
+    <a href="#formacao">Formação</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#hub">Links</a>
+    <a href="#contato">Contato</a>
+  </div>
+</div></nav>
+
+<header id="topo"><div class="wrap">
+  <div class="eyebrow">Rio de Janeiro</div>
+  <h1>Edson<br><span>Souza Leite</span></h1>
+  <div class="slogan">Vá Além do Óbvio</div>
+  <p class="one">Do atendimento e da venda pro código, pro inventário e pra imagem.</p>
+
+  <div class="dual">
+    <figure class="face">
+      <img src="assets/edson.jpg" width="220" height="220" alt="Edson Souza Leite">
+      <figcaption><strong>Edson</strong><span>Operação · pessoas · chão</span></figcaption>
+    </figure>
+    <figure class="face sys">
+      <img src="assets/sistema.jpg" width="220" height="220" alt="Assinatura visual — arte e tecnologia">
+      <figcaption><strong>Sistema</strong><span>Arte · código · imagem</span></figcaption>
+    </figure>
+  </div>
+  <p class="pillars">Identidade · Criação · Tecnologia · Liberdade</p>
+
+  <p class="lead">
+    Transformo experiência de chão — atendimento, vendas e rotina sob pressão —
+    em inventário, automação, Python e presença visual com método.
+    Sem enrolação. Sem vender fumaça. Parto do problema real.
+  </p>
+  <div class="btns">
+    <a class="btn btn-p" href="mailto:eddy.digital.solutions@gmail.com">E-mail</a>
+    <a class="btn" href="https://wa.me/5512996532056?text=Ol%C3%A1%20Edson%2C%20vim%20pelo%20seu%20portf%C3%B3lio" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a class="btn" href="https://linktr.ee/EddyDigitalSolutions" target="_blank" rel="noopener noreferrer">Linktree</a>
+    <a class="btn" href="https://github.com/Srdarth" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="btn" href="#hub">Todos os links</a>
+  </div>
+</div></header>
+
+<main>
+<section id="essencia"><div class="wrap">
+  <div class="lab">01 — Essência</div>
+  <h2 class="h2">Duas camadas, uma pessoa</h2>
+  <div class="boxes">
+    <article class="box">
+      <h3>O chão</h3>
+      <p>SAC de alta demanda, varejo, prospecção, estágio jurídico, produção. Pessoas, prazo, protocolo.</p>
+      <ul>
+        <li>Ouvir antes de propor</li>
+        <li>Organizar informação sob pressão</li>
+        <li>Entregar o que o outro consegue usar</li>
+        <li>Base em operação real + Direito (Ibmec, trancado)</li>
+      </ul>
+    </article>
+    <article class="box">
+      <h3>O sistema</h3>
+      <p>A mesma lógica em código, marca e criação: inventário, automação, personagens e produtos digitais.</p>
+      <ul>
+        <li>NeverLost · Python Papo Reto</li>
+        <li>Avatares e modelos (Fiverr / Behance / ArtStation)</li>
+        <li>Direção visual e consistência de personagem</li>
+        <li>Slogan: <strong>Vá Além do Óbvio</strong></li>
+      </ul>
+    </article>
+  </div>
+  <div class="txt" style="margin-top:18px">
+    <p>Não são duas pessoas. São duas camadas. <span class="hi">O chão sustenta; o sistema projeta.</span> A arte da coroa, do naipe e do Cristo no horizonte não é decoração — é a síntese do que já estava nos cadernos: fé, ritmo, metamorfose e soberania.</p>
+  </div>
+</div></section>
+
+<section id="experiencia"><div class="wrap">
+  <div class="lab">02 — Trajetória</div>
+  <h2 class="h2">Onde o método nasceu</h2>
+  <div class="txt" style="margin-bottom:16px">
+    <p>Não é currículo pra RH. É o chão que ensinou a ouvir, registrar e entregar sob pressão.</p>
+  </div>
+  <div class="jobs">
+    <article class="job">
+      <h3>Atendimento (SAC Light)</h3>
+      <div class="co">A&amp;C Contact Center · 2025 – 2026</div>
+      <p>Alta demanda, protocolos, dados cadastrais e suporte de primeiro nível.</p>
+    </article>
+    <article class="job">
+      <h3>Vendas consultivas · Moda</h3>
+      <div class="co">Luidgi Specciale · 2024 – 2025</div>
+      <p>Relacionamento, fidelização, vitrine e estoque no ponto de venda.</p>
+    </article>
+    <article class="job">
+      <h3>Consultoria comercial B2B/B2C</h3>
+      <div class="co">Voice Brasil · 2021</div>
+      <p>Prospecção, leads e relatórios de performance.</p>
+    </article>
+    <article class="job">
+      <h3>Apoio administrativo-jurídico</h3>
+      <div class="co">Siqueira Castro Advogados · 2018</div>
+      <p>Processos, prazos, documentação e atuação como preposto.</p>
+    </article>
+    <article class="job">
+      <h3>Operação e ponto de venda</h3>
+      <div class="co">Hummm Pizzas · Brinquedos Bandeirantes</div>
+      <p>Ritmo operacional, exposição de produto e contato direto com cliente.</p>
+    </article>
+  </div>
+</div></section>
+
+<section id="formacao"><div class="wrap">
+  <div class="lab">03 — Formação</div>
+  <h2 class="h2">Base técnica (sem maquiagem)</h2>
+  <div class="g2">
+    <article class="card">
+      <h3>Banco de Dados — Estácio</h3>
+      <p>Em andamento. CR <strong>9,35</strong>. ~1.340h de 2.020h. Trancamento temporário, retorno previsto.</p>
+      <p class="note">Cert. intermediárias: Admin BD (240h) · Alto desempenho (220h)</p>
+      <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Cloud</span><span class="chip">Web</span></div>
+    </article>
+    <article class="card">
+      <h3>SENAI — Programação Front-End</h3>
+      <p>HTML, CSS, JavaScript, lógica e DOM. Em andamento.</p>
+    </article>
+    <article class="card">
+      <h3>Direito — Ibmec</h3>
+      <p>Trancado em nov/2022. Leitura de processo, prazo e documento — não é diploma.</p>
+    </article>
+    <article class="card">
+      <h3>Complementar</h3>
+      <p>Recode, DIO (Git/Python), AWS, Bradesco Office, Ginead (vendas), IFRS (inglês/espanhol).</p>
+    </article>
+  </div>
+</div></section>
+
+<section id="competencias"><div class="wrap">
+  <div class="lab">04 — Competências</div>
+  <h2 class="h2">Ferramentas do método</h2>
+  <div class="skills">
+    <span class="skill">Python</span><span class="skill">SQLite</span><span class="skill">HTML / CSS / JS</span>
+    <span class="skill">Git / GitHub</span><span class="skill">Automação de arquivos</span>
+    <span class="skill">Inventário e classificação</span><span class="skill">Noções AWS</span>
+    <span class="skill">Excel / Word</span><span class="skill">Avatares e modelos digitais</span>
+    <span class="skill">Direção visual</span><span class="skill">Diagnóstico de operação</span>
+    <span class="skill">Atendimento e vendas</span>
+  </div>
+</div></section>
+
+<section id="projetos"><div class="wrap">
+  <div class="lab">05 — Projetos</div>
+  <h2 class="h2">Do laboratório à entrega</h2>
+  <div class="proj">
+    <article class="pr">
+      <h3>NeverLost</h3>
+      <p>Scanner offline: mapa de discos, relatório HTML, SQLite. Observe-only — não move, não apaga.</p>
+      <a class="st" href="https://github.com/Srdarth/NeverLost-ObserverEdition" target="_blank" rel="noopener noreferrer">GitHub · Observer Edition →</a>
+    </article>
+    <article class="pr">
+      <h3>Python Papo Reto</h3>
+      <p>Material prático: aulas, scripts, projeto com FastAPI e SQLite.</p>
+      <a class="st" href="https://linktr.ee/EddyDigitalSolutions" target="_blank" rel="noopener noreferrer">Linktree →</a>
+    </article>
+    <article class="pr">
+      <h3>Avatares e modelos digitais</h3>
+      <p>Personagens e identidades com consistência — sob demanda.</p>
+      <a class="st" href="https://br.fiverr.com/s/od8Zryb" target="_blank" rel="noopener noreferrer">Fiverr →</a>
+      <a class="st" href="https://www.behance.net/EddyDigitalSolutions" target="_blank" rel="noopener noreferrer">Behance →</a>
+      <a class="st" href="https://eddy_digital_solutions.artstation.com/" target="_blank" rel="noopener noreferrer">ArtStation →</a>
+    </article>
+    <article class="pr">
+      <h3>Inventário e organização digital</h3>
+      <p>Diagnóstico de acervos, classificação e relatório acionável — a mesma lógica do NeverLost em serviço.</p>
+      <div class="st">Sob demanda</div>
+    </article>
+  </div>
+</div></section>
+
+<section id="metodo"><div class="wrap">
+  <div class="lab">06 — Método</div>
+  <h2 class="h2">Como o slogan vira operação</h2>
+  <div class="proc">
+    <div class="pi"><strong>Entender</strong><span>o problema real</span></div>
+    <div class="pi"><strong>Diagnosticar</strong><span>o que ninguém mapeou</span></div>
+    <div class="pi"><strong>Construir</strong><span>o mínimo que funciona</span></div>
+    <div class="pi"><strong>Testar</strong><span>no chão</span></div>
+    <div class="pi"><strong>Melhorar</strong><span>com evidência</span></div>
+  </div>
+  <div class="txt" style="margin-top:18px">
+    <p><span class="hi">Tecnologia sem demanda é hobby.</span> Sonhe · Planeje · Crie · Conquiste — nessa ordem, com evidência no meio.</p>
+  </div>
+</div></section>
+
+<section id="hub"><div class="wrap">
+  <div class="lab">07 — Hub</div>
+  <h2 class="h2">Onde me encontrar</h2>
+  <div class="hub">
+    <a href="https://linktr.ee/EddyDigitalSolutions" target="_blank" rel="noopener noreferrer"><strong>Linktree</strong><span>central</span></a>
+    <a href="https://github.com/Srdarth" target="_blank" rel="noopener noreferrer"><strong>GitHub</strong><span>Srdarth</span></a>
+    <a href="https://www.linkedin.com/in/edson-91-eddy/" target="_blank" rel="noopener noreferrer"><strong>LinkedIn</strong><span>edson-91-eddy</span></a>
+    <a href="https://br.fiverr.com/s/od8Zryb" target="_blank" rel="noopener noreferrer"><strong>Fiverr</strong><span>avatares</span></a>
+    <a href="https://www.behance.net/EddyDigitalSolutions" target="_blank" rel="noopener noreferrer"><strong>Behance</strong><span>visual</span></a>
+    <a href="https://eddy_digital_solutions.artstation.com/" target="_blank" rel="noopener noreferrer"><strong>ArtStation</strong><span>portfolio</span></a>
+    <a href="https://www.br.freelancer.com/u/EddysLeite" target="_blank" rel="noopener noreferrer"><strong>Freelancer</strong><span>EddysLeite</span></a>
+    <a href="https://br.pinterest.com/EddyDigitalSolutions/" target="_blank" rel="noopener noreferrer"><strong>Pinterest</strong><span>referências</span></a>
+    <a href="https://x.com/eddysleite" target="_blank" rel="noopener noreferrer"><strong>X</strong><span>@eddysleite</span></a>
+    <a href="mailto:eddy.digital.solutions@gmail.com"><strong>E-mail</strong><span>eddy.digital.solutions@gmail.com</span></a>
+    <a href="tel:+5512996532056"><strong>Telefone</strong><span>(12) 99653-2056</span></a>
+    <a href="https://wa.me/5512996532056?text=Ol%C3%A1%20Edson%2C%20vim%20pelo%20seu%20portf%C3%B3lio" target="_blank" rel="noopener noreferrer"><strong>WhatsApp</strong><span>mensagem pronta</span></a>
+  </div>
+</div></section>
+
+<section id="contato"><div class="wrap">
+  <div class="contact">
+    <div class="lab">08 — Contato</div>
+    <h2 class="h2">Projeto, parceria ou dúvida objetiva</h2>
+    <p>Rio de Janeiro · operação remota<br>
+    <strong style="color:var(--t)">eddy.digital.solutions@gmail.com</strong><br>
+    <strong style="color:var(--t)">(12) 99653-2056</strong></p>
+    <div class="btns" style="justify-content:center">
+      <a class="btn btn-p" href="mailto:eddy.digital.solutions@gmail.com">E-mail</a>
+      <a class="btn" href="https://wa.me/5512996532056?text=Ol%C3%A1%20Edson%2C%20vim%20pelo%20seu%20portf%C3%B3lio" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a class="btn" href="https://linktr.ee/EddyDigitalSolutions" target="_blank" rel="noopener noreferrer">Linktree</a>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Edson Souza Leite</p>
+    <p class="s">Vá Além do Óbvio · Identidade · Criação · Tecnologia · Liberdade</p>
+  </div>
+</footer>
+</body>
+</html>
