@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Edson Souza Leite — Vila da Penha, RJ. Experiência em atendimento, vendas e operação. Formação em Banco de Dados (Estácio) e Front-End (SENAI). Python, SQLite, automação, NeverLost e EddY Digital Solutions.">
+    <meta name="author" content="Edson Souza Leite">
+    <title>Edson Souza Leite | Dados, operação e soluções digitais</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0b0b0f;
+            --surface: #111117;
+            --text: #eeeeee;
+            --muted: #a8a8b3;
+            --line: #292932;
+            --accent: #8f7cff;
+            --accent-soft: #a899ff;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .container {
+            width: min(92%, 1100px);
+            margin: 0 auto;
+        }
+
+        header {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--line);
+            padding: 70px 0 60px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.35fr 0.9fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-bottom: 18px;
+            padding: 7px 14px;
+            border: 1px solid #3b3b47;
+            border-radius: 30px;
+            color: #a7a7b5;
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: clamp(40px, 7vw, 76px);
+            line-height: 0.95;
+            margin-bottom: 18px;
+        }
+
+        h1 span { color: var(--accent); }
+
+        .hero h2 {
+            font-size: clamp(18px, 2.5vw, 22px);
+            font-weight: normal;
+            color: #bdbdc8;
+            margin-bottom: 18px;
+        }
+
+        .lead {
+            color: var(--muted);
+            max-width: 620px;
+            margin-bottom: 26px;
+            font-size: 16px;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 11px 18px;
+            border: 1px solid #383844;
+            border-radius: 30px;
+            background: var(--surface);
+            transition: 0.2s;
+            font-size: 14px;
+        }
+
+        .button:hover {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #0b0b0f;
+        }
+
+        .button-primary {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #0b0b0f;
+            font-weight: bold;
+        }
+
+        .button-primary:hover {
+            background: var(--accent-soft);
+            border-color: var(--accent-soft);
+        }
+
+        .profile-box {
+            border: 1px solid var(--line);
+            padding: 28px;
+            border-radius: 18px;
+            background: var(--surface);
+        }
+
+        .profile-box h3 {
+            margin-bottom: 14px;
+            font-size: 17px;
+        }
+
+        .profile-box p {
+            color: var(--muted);
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .profile-box p:last-child { margin-bottom: 0; }
+
+        .profile-meta {
+            margin-top: 18px;
+            padding-top: 16px;
+            border-top: 1px solid var(--line);
+            font-size: 13px;
+            color: #858592;
+        }
+
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .section-label {
+            color: var(--accent);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 32px;
+        }
+
+        .about { max-width: 850px; }
+
+        .about p {
+            color: var(--muted);
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .highlight {
+            color: var(--text);
+            font-weight: bold;
+        }
+
+        .timeline { display: grid; gap: 18px; }
+
+        .experience {
+            border-left: 3px solid var(--accent);
+            padding: 22px 24px;
+            background: var(--surface);
+            border-radius: 0 14px 14px 0;
+        }
+
+        .experience h3 { margin-bottom: 4px; font-size: 17px; }
+
+        .experience .company {
+            color: var(--accent);
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .experience p { color: var(--muted); font-size: 14px; }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .card h3 { margin-bottom: 8px; font-size: 16px; }
+        .card p { color: var(--muted); font-size: 14px; }
+        .card .note {
+            margin-top: 10px;
+            font-size: 12px;
+            color: var(--accent);
+        }
+
+        .disciplines {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .disc {
+            font-size: 12px;
+            padding: 5px 10px;
+            border: 1px solid #383844;
+            border-radius: 20px;
+            color: #c8c8d0;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            padding: 9px 14px;
+            border: 1px solid #383844;
+            border-radius: 30px;
+            background: var(--surface);
+            color: #c8c8d0;
+            font-size: 13px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .project {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 24px;
+            transition: 0.2s;
+        }
+
+        .project:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .project h3 { margin-bottom: 10px; }
+        .project p { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+        .status { font-size: 12px; color: var(--accent); }
+
+        .process {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+
+        .process-item {
+            text-align: center;
+            padding: 20px 10px;
+            border: 1px solid var(--line);
+            background: var(--surface);
+            border-radius: 14px;
+        }
+
+        .process-item strong { display: block; margin-bottom: 6px; font-size: 14px; }
+        .process-item span { color: #858592; font-size: 12px; }
+
+        .certs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .cert {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 16px 18px;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .cert strong { color: var(--text); }
+
+        .contact {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .contact p {
+            color: var(--muted);
+            margin-bottom: 22px;
+        }
+
+        footer {
+            padding: 36px 0;
+            text-align: center;
+            color: #777783;
+            font-size: 13px;
+        }
+
+        footer p + p { margin-top: 4px; }
+
+        @media (max-width: 850px) {
+            .hero, .grid-2, .projects, .certs { grid-template-columns: 1fr; }
+            .process { grid-template-columns: 1fr 1fr; }
+            header { min-height: auto; padding: 80px 0 50px; }
+        }
+
+        @media (max-width: 480px) {
+            .process { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="hero">
+            <div>
+                <span class="tag">Vila da Penha · Rio de Janeiro / RJ</span>
+                <h1>Edson<br><span>Souza Leite.</span></h1>
+                <h2>Operação, dados e formação em tecnologia.</h2>
+                <p class="lead">
+                    Experiência real em atendimento de alta demanda, vendas e
+                    rotina administrativa. Em formação em Banco de Dados (Estácio)
+                    e Front-End (SENAI), com projetos próprios em Python, SQLite
+                    e inventário local de arquivos.
+                </p>
+                <div class="actions">
+                    <a class="button button-primary" href="mailto:leite.souza.edson@gmail.com">E-mail</a>
+                    <a class="button" href="https://github.com/Srdarth" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="button" href="https://linktr.ee/EddyDigitalSolutions" target="_blank" rel="noopener noreferrer">Linktree</a>
+                    <a class="button" href="https://x.com/eddysleite" target="_blank" rel="noopener noreferrer">X</a>
+                </div>
+            </div>
+
+            <aside class="profile-box">
+                <h3>Edson ⇄ EddY</h3>
+                <p>
+                    <strong>Edson</strong> é a base: pessoas, pressão, vendas,
+                    atendimento e problema concreto.
+                </p>
+                <p>
+                    <strong>EddY</strong> é essa base aplicada em tecnologia:
+                    dados, automação, sistemas e a marca
+                    <strong>EddY Digital Solutions</strong>.
+                </p>
+                <p>
+                    Não são duas carreiras. São duas camadas da mesma trajetória.
+                </p>
+                <div class="profile-meta">
+                    Disponível para até 6h/dia · turno diurno · início imediato
+                </div>
+            </aside>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<section id="sobre">
+    <div class="container">
+        <div class="section-label">01 — Identidade</div>
+        <h2 class="section-title">Quem sou</h2>
+        <div class="about">
+            <p>
+                Minha trajetória passou por telemarketing, varejo, consultoria
+                comercial, apoio jurídico-administrativo e operação. Em todos
+                esses contextos o padrão se repetia:
+                <span class="highlight">
+                    gente com problema, processo incompleto e prazo curto.
+                </span>
+            </p>
+            <p>
+                Isso virou método: ouvir, diagnosticar, organizar a informação
+                e entregar algo que a outra pessoa consiga usar.
+            </p>
+            <p>
+                A tecnologia entra como ferramenta desse método — não como
+                fim em si. Estudo Banco de Dados na Estácio (curso em andamento,
+                com trancamento temporário e retorno previsto), Front-End no SENAI,
+                e construo projetos próprios em Python e inventário de arquivos.
+            </p>
+            <p>
+                Também cursei Direito no Ibmec (trancado em 2022). Essa passagem
+                reforçou leitura de processo, prazo e organização documental —
+                útil tanto em operação quanto em sistemas.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="experiencia">
+    <div class="container">
+        <div class="section-label">02 — Experiência</div>
+        <h2 class="section-title">Onde já atuei</h2>
+        <div class="timeline">
+            <article class="experience">
+                <h3>Atendente de Telemarketing (SAC Light)</h3>
+                <div class="company">A&amp;C Contact Center · 2025 – 2026</div>
+                <p>
+                    Atendimento receptivo de alta demanda, registro de
+                    solicitações/ocorrências, atualização de dados e suporte
+                    de primeiro nível conforme procedimentos da operação.
+                </p>
+            </article>
+            <article class="experience">
+                <h3>Vendedor de Moda Masculina</h3>
+                <div class="company">Luidgi Specciale · 2024 – 2025</div>
+                <p>
+                    Venda consultiva, identificação de necessidade, fidelização,
+                    organização de vitrine e apoio ao controle de estoque.
+                </p>
+            </article>
+            <article class="experience">
+                <h3>Consultor Comercial B2B/B2C</h3>
+                <div class="company">Voice Brasil · 2021</div>
+                <p>
+                    Prospecção, qualificação de leads e relatórios de
+                    performance de vendas.
+                </p>
+            </article>
+            <article class="experience">
+                <h3>Estagiário Administrativo Jurídico</h3>
+                <div class="company">Siqueira Castro Advogados · 2018</div>
+                <p>
+                    Acompanhamento de processos, suporte administrativo,
+                    organização de informações e atuação como preposto.
+                </p>
+            </article>
+            <article class="experience">
+                <h3>Auxiliar de Cozinha</h3>
+                <div class="company">Hummm Pizzas</div>
+                <p>
+                    Produção, organização de insumos, higiene e ritmo
+                    operacional sob pressão.
+                </p>
+            </article>
+            <article class="experience">
+                <h3>Promotor de Vendas</h3>
+                <div class="company">Brinquedos Bandeirantes</div>
+                <p>
+                    Promoção em ponto de venda, relacionamento com lojas
+                    e organização de exposição.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section id="formacao">
+    <div class="container">
+        <div class="section-label">03 — Formação</div>
+        <h2 class="section-title">Base acadêmica e técnica</h2>
+        <div class="grid-2">
+            <article class="card">
+                <h3>Tecnólogo em Banco de Dados — Estácio</h3>
+                <p>
+                    Ingresso em 2023. Curso em andamento, com trancamento
+                    temporário e previsão de retorno/conclusão. Coeficiente
+                    de rendimento acumulado: <strong>9,35</strong>.
+                    Carga cumprida: cerca de 1.340h de 2.020h.
+                </p>
+                <p class="note">
+                    Certificações intermediárias: Administração de BD (240h) ·
+                    Soluções de BD de Alto Desempenho (220h)
+                </p>
+                <div class="disciplines">
+                    <span class="disc">Python (paradigmas + análise)</span>
+                    <span class="disc">SQL / NoSQL</span>
+                    <span class="disc">Admin de BD</span>
+                    <span class="disc">Tuning e segurança</span>
+                    <span class="disc">Computação em nuvem</span>
+                    <span class="disc">HTML/CSS/JS/PHP</span>
+                    <span class="disc">IA para devs</span>
+                    <span class="disc">Sistemas distribuídos</span>
+                </div>
+            </article>
+            <article class="card">
+                <h3>SENAI — Programação Front-End</h3>
+                <p>
+                    HTML, CSS, JavaScript, lógica de programação, DOM,
+                    arrays, objetos e projetos práticos de página e interface.
+                    Formação em andamento.
+                </p>
+            </article>
+            <article class="card">
+                <h3>Bacharelado em Direito — Ibmec</h3>
+                <p>
+                    Curso trancado em novembro de 2022. Base em leitura de
+                    processo, prazo, documentação e rotina jurídica —
+                    aplicada depois no estágio e na organização de informação.
+                </p>
+                <p class="note">Não concluído · experiência formativa, não diploma</p>
+            </article>
+            <article class="card">
+                <h3>Aprendizado por projeto</h3>
+                <p>
+                    Preferência por construir, quebrar, corrigir e documentar.
+                    Foco em ferramentas que rodam offline, com log e auditoria
+                    — alinhado ao trabalho com inventário e dados.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section id="competencias">
+    <div class="container">
+        <div class="section-label">04 — Competências</div>
+        <h2 class="section-title">O que uso de fato</h2>
+        <div class="skills">
+            <span class="skill">Python</span>
+            <span class="skill">SQLite</span>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Lógica de programação</span>
+            <span class="skill">Git / GitHub</span>
+            <span class="skill">Noções de AWS</span>
+            <span class="skill">Excel / Word (intermediário)</span>
+            <span class="skill">Automação de arquivos</span>
+            <span class="skill">Inventário e classificação</span>
+            <span class="skill">Atendimento</span>
+            <span class="skill">Vendas consultivas</span>
+            <span class="skill">Negociação</span>
+            <span class="skill">Diagnóstico</span>
+            <span class="skill">Inglês intermediário</span>
+            <span class="skill">Espanhol básico</span>
+        </div>
+    </div>
+</section>
+
+<section id="certificacoes">
+    <div class="container">
+        <div class="section-label">05 — Certificações e cursos</div>
+        <h2 class="section-title">Formação complementar</h2>
+        <div class="certs">
+            <div class="cert"><strong>Recode</strong> — Gestão de Projetos e Aplicativos de Impacto (20h)</div>
+            <div class="cert"><strong>DIO</strong> — Git/GitHub, Python e lógica de programação</div>
+            <div class="cert"><strong>AWS / LocalizaLabs</strong> — Introdução à nuvem + Bootcamp Descubra a Nuvem</div>
+            <div class="cert"><strong>Fundação Bradesco</strong> — Office intermediário (110h) + Office 365/Teams</div>
+            <div class="cert"><strong>Ginead</strong> — Atendimentos e Vendas (40h)</div>
+            <div class="cert"><strong>Exame</strong> — Carreira em Inteligência Artificial</div>
+            <div class="cert"><strong>IFRS</strong> — Inglês e espanhol (em andamento)</div>
+            <div class="cert"><strong>Estácio</strong> — Certificações intermediárias de Banco de Dados (460h combinadas)</div>
+        </div>
+    </div>
+</section>
+
+<section id="projetos">
+    <div class="container">
+        <div class="section-label">06 — Projetos</div>
+        <h2 class="section-title">Laboratório que virou prática</h2>
+        <div class="projects">
+            <article class="project">
+                <h3>NeverLost</h3>
+                <p>
+                    Scanner offline para mapear discos e arquivos: inventário,
+                    relatório HTML e SQLite, sem mover nem apagar dados.
+                    Foco em soberania digital e diagnóstico de acervo.
+                </p>
+                <div class="status">Em consolidação (código + builds)</div>
+            </article>
+            <article class="project">
+                <h3>EddY Core</h3>
+                <p>
+                    Motor interno de inventário, classificação e planejamento
+                    sobre arquivos locais. Aplicado a acervo indexado da ordem
+                    de centenas de milhares de arquivos, com dry-run e logs.
+                </p>
+                <div class="status">Sistema interno / laboratório</div>
+            </article>
+            <article class="project">
+                <h3>Python Papo Reto</h3>
+                <p>
+                    Material educacional de Python: aulas, exercícios e
+                    progressão prática até dados e API — construído no mesmo
+                    processo de formação.
+                </p>
+                <div class="status">Material educacional em evolução</div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section id="metodo">
+    <div class="container">
+        <div class="section-label">07 — Método</div>
+        <h2 class="section-title">Como trato um problema</h2>
+        <div class="process">
+            <div class="process-item">
+                <strong>Entender</strong>
+                <span>o que a pessoa precisa de verdade</span>
+            </div>
+            <div class="process-item">
+                <strong>Diagnosticar</strong>
+                <span>o que está quebrado ou faltando</span>
+            </div>
+            <div class="process-item">
+                <strong>Construir</strong>
+                <span>a menor solução que funcione</span>
+            </div>
+            <div class="process-item">
+                <strong>Testar</strong>
+                <span>no ambiente real</span>
+            </div>
+            <div class="process-item">
+                <strong>Melhorar</strong>
+                <span>com evidência, não achismo</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="direcao">
+    <div class="container">
+        <div class="section-label">08 — Direção</div>
+        <h2 class="section-title">Para onde estou indo</h2>
+        <div class="about">
+            <p>
+                <strong>Curto prazo:</strong> consolidar front-end e dados,
+                retomar e concluir o ciclo de Banco de Dados, e deixar claro
+                o que é laboratório versus o que está pronto para uso.
+            </p>
+            <p>
+                <strong>Médio prazo:</strong> serviços e produtos sob a
+                EddY Digital Solutions — automação, inventário, material
+                educacional e soluções sob medida.
+            </p>
+            <p>
+                Tecnologia serve para resolver problema real. O resto é ruído.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="contato">
+    <div class="container">
+        <div class="contact">
+            <div class="section-label">09 — Contato</div>
+            <h2 class="section-title">Vamos conversar</h2>
+            <p>
+                Vila da Penha · Rio de Janeiro / RJ<br>
+                leite.souza.edson@gmail.com · (21) 97207-8045
+            </p>
+            <div class="actions" style="justify-content: center;">
+                <a class="button button-primary" href="mailto:leite.souza.edson@gmail.com">E-mail</a>
+                <a class="button" href="https://github.com/Srdarth" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="button" href="https://linktr.ee/EddyDigitalSolutions" target="_blank" rel="noopener noreferrer">Linktree</a>
+                <a class="button" href="https://x.com/eddysleite" target="_blank" rel="noopener noreferrer">X</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>Edson Souza Leite</p>
+        <p>EddY Digital Solutions</p>
+    </div>
+</footer>
+
+</body>
+</html>
